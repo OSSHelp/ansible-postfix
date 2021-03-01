@@ -1,12 +1,3 @@
 ---
-- name: postfix restart
-  service:
-    name: postfix
-    state: restarted
-    enabled: true
-
 - name: postfix reload
-  service:
-    name: postfix
-    state: reloaded
-    enabled: true
+  include_tasks: postfix-reload.yml
